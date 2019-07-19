@@ -1,12 +1,9 @@
-07/19/2019 06:49:11 PM : Commencing with ENCUT autotune.
-07/19/2019 06:49:35 PM : Completed ENCUT autotune.
-07/19/2019 06:49:35 PM : Completed ENCUT autotune.
-07/19/2019 06:49:35 PM : Commencing volume scan...
-07/19/2019 06:49:35 PM : Loaded initial POSCAR file.
-07/19/2019 06:49:35 PM : Performing volume scan.
-07/19/2019 06:49:49 PM : Volume scan complete.
-07/19/2019 06:49:49 PM : Fitting equations of state.
-07/19/2019 06:49:49 PM : Rescaling with optimized volume.
-07/19/2019 06:49:49 PM : Performing self-consistent step.
-07/19/2019 06:49:50 PM : Saving final POSCAR_vol.
-07/19/2019 06:49:50 PM : Volume scan complete.
+07/19/2019 10:18:52 PM : Commencing volume scan...
+07/19/2019 10:18:52 PM : Loaded initial POSCAR file.
+07/19/2019 10:18:52 PM : Performing volume scan.
+07/19/2019 10:19:24 PM : Volume scan complete.
+07/19/2019 10:19:24 PM : Fitting equations of state.
+07/19/2019 10:19:24 PM : Optimal volume found. Rescaling original cell.
+07/19/2019 10:19:24 PM : Performing self-consistent step.
+07/19/2019 10:19:26 PM : Saving self-consistent calculator.
+07/19/2019 10:19:26 PM : Volume scan complete.
