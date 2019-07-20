@@ -1,9 +1,9 @@
-07/19/2019 10:18:52 PM : Commencing volume scan...
-07/19/2019 10:18:52 PM : Loaded initial POSCAR file.
-07/19/2019 10:18:52 PM : Performing volume scan.
-07/19/2019 10:19:24 PM : Volume scan complete.
-07/19/2019 10:19:24 PM : Fitting equations of state.
-07/19/2019 10:19:24 PM : Optimal volume found. Rescaling original cell.
-07/19/2019 10:19:24 PM : Performing self-consistent step.
-07/19/2019 10:19:26 PM : Saving self-consistent calculator.
-07/19/2019 10:19:26 PM : Volume scan complete.
+07/20/2019 05:24:06 PM : Commencing volume scan...
+07/20/2019 05:24:06 PM : Loaded initial POSCAR file.
+07/20/2019 05:24:06 PM : Performing volume scan.
+07/20/2019 05:24:38 PM : Volume scan complete.
+07/20/2019 05:24:38 PM : Fitting equations of state.
+07/20/2019 05:24:38 PM : Optimal volume found. Rescaling original cell.
+07/20/2019 05:24:38 PM : Performing self-consistent step.
+07/20/2019 05:24:40 PM : Saving self-consistent calculator.
+07/20/2019 05:24:40 PM : Volume scan complete.
