@@ -1,0 +1,9 @@
+INCAR created by Atomic Simulation Environment
+ SIGMA = 0.025000
+ EDIFF = -1.00e-04
+ EDIFFG = -1.00e-06
+ SYMPREC = 1.00e-04
+ PREC = Acc
+ GGA = PE
+ LORBIT = 11
+ LREAL = Auto
