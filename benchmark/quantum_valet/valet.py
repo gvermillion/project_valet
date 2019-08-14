@@ -28,8 +28,8 @@ class AutotuneBandgap:
             os.system('mkdir -p {}'.format(self.path_out))
             print('Workspace created at {}'.format(self.path_out))
 
-        self.do_autotune_volume()
-        self.get_bandgap()
+        #self.do_autotune_volume()
+        #self.get_bandgap()
         print("Done.")
 
     def do_autotune_volume(self,start_scan=0.90,end_scan=1.10,num_scan=25,exclude_type=None,only_type=None):
@@ -99,5 +99,5 @@ class AutotuneBandgap:
         self.bandgap_direct = direct_gap
 
     def clean_up(self):
-        os.system("cd {}; rm ase-sort.dat CH* D* E* I* K* OZ* P* vasp.out vasprun* X*".format(self.path_out))
+        os.system("cd {}; rm ase-sort.dat CH* D* E* I* K* OSZ* P* REPORT vasp.out vasprun* X*".format(self.path_out))
     
