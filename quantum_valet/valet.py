@@ -22,17 +22,17 @@ class AutotuneBandgap:
         else:
             print("Calculator must be of type `ase.calculator.vasp.Vasp2`. Got type `{}`.".format(type(calc)))
             return
-        self.path_out = os.path.join('qv_workspace',path_out)
+        self.path_out = os.path.join('.qv_workspace',path_out)
         self.system.calc.set(directory=self.path_out)
         if not os.path.isdir(self.path_out):
             os.system('mkdir -p {}'.format(self.path_out))
-            print('Output directory created at: {}'.format(self.path_out))
+            print('Workspace created at {}'.format(self.path_out))
 
         self.do_autotune_volume()
-        #self.get_bandgap()
+        self.get_bandgap()
         print("Done.")
 
-    def do_autotune_volume(self,start_scan=0.90,end_scan=1.10,num_scan=15,exclude_type=None,only_type=None):
+    def do_autotune_volume(self,start_scan=0.90,end_scan=1.10,num_scan=25,exclude_type=None,only_type=None):
 
         # Load system and calculator
         system = self.system.copy()
@@ -85,18 +85,18 @@ class AutotuneBandgap:
         del self.system
         self.system = system
         self.system.set_cell(scale*start_cell,scale_atoms=True)
-        print(self.system.get_volume())
         
         print("Performing second relaxation.")
         self.system.get_potential_energy()
-        print(self.system.get_volume())
         
         #self.clean_up()
         
     def get_bandgap(self):
         print("Calculating bandgap.")
         gap,p1,p2 = bandgap(self.system.calc);
+        direct_gap,direct_p1,direct_p2 = bandgap(self.system.calc,direct=True);
         self.bandgap = gap
+        self.bandgap_direct = direct_gap
 
     def clean_up(self):
         os.system("cd {}; rm ase-sort.dat CH* D* E* I* K* OZ* P* vasp.out vasprun* X*".format(self.path_out))
