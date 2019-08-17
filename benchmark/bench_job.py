@@ -13,8 +13,7 @@ def signal_handler(signum, frame):
     raise Exception("Timed out!")
 
 signal.signal(signal.SIGALRM, signal_handler)
-#signal.alarm(10800)   # Three hours per job first run
-signal.alarm(1800)
+signal.alarm(10800)   # Three hours per job first run
 
 results = []
 
@@ -48,11 +47,11 @@ for j,key in enumerate(keys):
             result = {'system':valet.system,'bandgap':None,'bandgap_direct':None,'eos_fits':valet.eos_fits,'eos_errors':valet.eos_errors,'volume_vs_energy':valet.volume_vs_energy,'index':key}  
         else:
             result = {'system':None,'bandgap':None,'bandgap_direct':None,'eos_fits':None,'eos_errors':None,'volume_vs_energy':None,'index':key}
+        valet.clean_up()
     except Exception:
         # Timeout Error
         result = {'index':key,'timeout':True}
 
-    valet.clean_up()    
     results.append(results)
    
     with open('cp_bs_part_{}.pkl'.format(i),'wb') as fout:

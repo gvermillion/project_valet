@@ -5,7 +5,7 @@ from quantum_valet.valet import AutotuneBandgap
 import numpy as np
 
 bench_set = pkl.load(open('bench_set/pickles/bs_part_0.pkl','rb'))
-key = 'mp-109'
+key = 'mp-1'
 bs = bench_set[key]
 
 sys = bs['structure_initial']
